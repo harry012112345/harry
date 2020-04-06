@@ -1,37 +1,16 @@
 ## 我是瘋狗我驕傲
 
-You can use the [editor on GitHub](https://github.com/harry012112345/harry/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### 國動
+https://i.imgur.com/D3zmG9m.jpg
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+我的偶像，臺灣桃園人，是網路遊戲實況主，為蹦蛙數位娛樂旗下藝人，綽號「國動」，源自於他喜歡看的政論節目《大話新聞》中的常態來賓吳國棟。除此之外，也有「瘋狗動」、「海鮮稽查員」、「改革家」、「鼻地大師」等稱呼。他是另一位實況主「亞洲統神」張嘉航的哥哥。
+<br>
+我深受其啟發，在所有遊戲中變成瘋狗玩家。
 
-### Markdown
+### apex
+https://i.imgur.com/W2yqfPi.jpg
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+遊戲以3人小隊為單位進行遊戲，每局遊戲最多有60人。每位玩家可以從十二位傳奇角色中選擇一位進行遊戲，每位英雄都有其獨特的技能，玩家可以自訂其外觀。隊伍空投落地後需要尋找武器、彈藥及其他裝備，小隊間互相戰鬥至最後存活一隊為勝。遊戲特有復活系統，如有隊友死亡，玩家可以在時限內(90s)取得陣亡隊友的旗幟，並將其攜至重生點即可復活隊友。同時，遊戲也設有較為詳細的標記功能，也可進行隊伍語音。
+<br>
+但我身為一位瘋狗玩家，我跳下去都是直接拿拳頭灌滿那些新手的臉，打到變箱子，實踐我瘋狗玩家的原則。
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/harry012112345/harry/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
