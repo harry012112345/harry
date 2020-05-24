@@ -14,10 +14,10 @@
 <body>
 	<div class="abgne-block-20110423">
 		<ul>
-			<li><a href="#"><img src="https://i.imgur.com/l0J8D4L.png" /></a></li>
-			<li><a href="#"><img src="https://i.imgur.com/RE5xc6A.jpg" /></a></li>
-			<li><a href="#"><img src="https://i.imgur.com/S5F3ADb.jpg" /></a></li>
-			<li><a href="#"><img src="https://i.imgur.com/kFoFCNP.jpg" /></a></li>
+			<li><a href="#"><img src="i.imgur.com/l0J8D4L.png" /></a></li>
+			<li><a href="#"><img src="i.imgur.com/RE5xc6A.jpg" /></a></li>
+			<li><a href="#"><img src="i.imgur.com/S5F3ADb.jpg" /></a></li>
+			<li><a href="#"><img src="i.imgur.com/kFoFCNP.jpg" /></a></li>
 		</ul>
 	</div>
 </body>
