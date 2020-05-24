@@ -51,6 +51,9 @@ $(function(){
 			show();
 			timer = setTimeout(autoClickNext, _fadeSpeed + _speed);
 		}
+		if($this.hasClass('autoPlay')){
+	$controller.find('.play').click();
+}
  
 		function show() {
 			$li.eq(_index).animate({
