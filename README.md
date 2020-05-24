@@ -37,126 +37,74 @@
 		</ul>
 	</div>
 </body>
+<body>
+	<div class="abgne-block-20110423">
+		<ul>
+			<li><a href="#"><img src="images/1s.jpg" /></a></li>
+			<li><a href="#"><img src="images/2s.jpg" /></a></li>
+			<li><a href="#"><img src="images/3s.jpg" /></a></li>
+			<li><a href="#"><img src="images/4s.jpg" /></a></li>
+		</ul>
+	</div>
+</body>
 ul, li {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-.slideshow {
-	position: relative;
-	height: 160px;
-	width: 210px;
-	float: left;
-	margin: 0 10px;
-	border: 3px solid #ddd;
-}
-.slideshow li {
-	position: absolute;
-}
-.slideshow a img{
-	display: block;
-	padding: 0;
-	margin: 0 auto;
+a img {
 	border: none;
 }
-.slideshow li a{
-	display: block;
+.abgne-block-20110423 {
+	overflow: hidden;
+	margin: 10px;
+	width: 100px;	/* 圖片的寬 */
+	height: 100px;	/* 圖片的高 */
+	border: 1px solid #525252;
+	border-radius: 10px;
 }
-.slideshowController {
+.abgne-block-20110423 ul {
+	position: relative;
+}
+.abgne-block-20110423 ul li {
 	position: absolute;
-	right: 0;
-	bottom: 0;
 }
-.slideshowController a {
-background: transparent url(images/arrows.png) no-repeat left top;
-display: block;
-width: 30px;	
-height: 30px;
-position: absolute;
-right: 60px;
-bottom: 0;
-z-index: 9999;
-outline: none;
+ 
+.abgne-block-20110423 ul li a {
+	display: block;
+	width: 100px;	/* 圖片的寬 */
 }
-.slideshowController .next{
-background-position: -30px 0;
-right: 0;
-}
-.slideshowController .play{
-	background-position: -60px 0;
-	right: 30px;
-}
-.slideshowController .pause{
-	background-position: -90px 0;
-}
+.abgne-block-20110423 ul li a img {
+	border-radius: 10px;
+}	
 $(function(){
-
-	var _fadeSpeed = 600;
-
-	$('.slideshow').each(function(){
-
-		var $this = $(this), 
-			$ul = $this.find('ul'), 
+	// 取得全部要處理的區塊元素
+	$('.abgne-block-20110423').each(function(){
+		// 取得必要的元素並用 jQuery 包裝
+		// 再來取得 $li 的寬度及設定動畫時間
+		var $block = $(this),  
+			$ul = $block.find('ul'),
 			$li = $ul.find('li'), 
-			$controller = $('<div class="slideshowController"><a href="#"></a><a href="#" class="play"></a><a href="#" class="next"></a></div>').css('opacity', 0), 
-			_len = $li.length, 
-			_index = 0, timer, _speed = 2000;
-
-		$li.eq(_index).css('z-index', 2).siblings().css('opacity', 0);
-
-		$this.append($controller).hover(function(){
-			$controller.stop().animate({
-				opacity: 1
-			});
-		}, function(){
-			$controller.stop().animate({
-				opacity: 0
-			});
-		});
-
-		$controller.delegate('a', 'click', function(){
-
-			var $a = $(this), 
-				_className = $a.attr('class');
-
-			if(('play pause').indexOf(_className) > -1){
-
-				$a.toggleClass('pause').hasClass('pause') ? timer = setTimeout(autoClickNext, _fadeSpeed + _speed) : clearTimeout(timer);
-				return false;
-			}
+			_left = $block.offset().left,
+			_width = $li.find('a').width(), 
+			_ratio = Math.ceil(_width / $li.length);
  
-
-			clearTimeout(timer);
-
-			$a.siblings('.pause').removeClass('pause');
-
-			_index = ('next' == _className ? _index + 1 : _index - 1 + _len) % _len;
-
-			show();
+		// 除了第一張圖之外, 其它的都先隱藏
+		$li.eq(0).siblings().hide();
  
-			return false;
-		});
-
-		function autoClickNext() {
-			_index = (_index + 1) % _len;
-			show();
-			timer = setTimeout(autoClickNext, _fadeSpeed + _speed);
-		}
-		if($this.hasClass('autoPlay')){
-	$controller.find('.play').click();
-}
+		// 當滑鼠在 $block 上移動時
+		$block.mousemove(function(e){
  
-		function show() {
-			$li.eq(_index).animate({
-				opacity: 1, 
-				zIndex: 2
-			}, _fadeSpeed).siblings(':visible').animate({
-				opacity: 0, 
-				zIndex: 1
-			}, _fadeSpeed);
-		}
+			// 計算要顯示那一張圖片
+			var index = Math.floor((e.pageX - _left)/_ratio);
+ 
+			$li.eq(index).show().siblings().hide();
+		})
+	}).find('a').focus(function(){
+		this.blur();
 	});
-});
+});	
+	
 反正我很閒是一個YouTube頻道，團隊由鍾佳播、陳奕凱及趙福臨組成。內容以喜劇的方式討論各種主題，含括了社會政治、哲學思考、男女情感、都市傳說等，其中以諷刺資本主義和反抗體制的左膠為最主要特色。鏡頭則是以嘲弄YouTuber慣用的跳接剪輯，刻意粗糙的影像，以及縮放鏡頭的手法呈現。劇中創造了許多如「卑鄙源之助」、「惡魔貓男」、「台北暴徒」等虛構人物和洗腦台詞在網路上蔚為流行，可謂迷因製造機。
 
 ### Game
