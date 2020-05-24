@@ -12,6 +12,7 @@
 ### 我看youtube最愛看的團體:反正我很閒
 <body>
 	<div class="slideshow">
+		<div class="slideshow autoPlay">
 		<ul>
 			<li>
 				<a href="#">
