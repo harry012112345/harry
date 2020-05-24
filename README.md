@@ -89,7 +89,74 @@ right: 0;
 .slideshowController .pause{
 	background-position: -90px 0;
 }
+$(function(){
 
+	var _fadeSpeed = 600;
+
+	$('.slideshow').each(function(){
+
+		var $this = $(this), 
+			$ul = $this.find('ul'), 
+			$li = $ul.find('li'), 
+			$controller = $('<div class="slideshowController"><a href="#"></a><a href="#" class="play"></a><a href="#" class="next"></a></div>').css('opacity', 0), 
+			_len = $li.length, 
+			_index = 0, timer, _speed = 2000;
+
+		$li.eq(_index).css('z-index', 2).siblings().css('opacity', 0);
+
+		$this.append($controller).hover(function(){
+			$controller.stop().animate({
+				opacity: 1
+			});
+		}, function(){
+			$controller.stop().animate({
+				opacity: 0
+			});
+		});
+
+		$controller.delegate('a', 'click', function(){
+
+			var $a = $(this), 
+				_className = $a.attr('class');
+
+			if(('play pause').indexOf(_className) > -1){
+
+				$a.toggleClass('pause').hasClass('pause') ? timer = setTimeout(autoClickNext, _fadeSpeed + _speed) : clearTimeout(timer);
+				return false;
+			}
+ 
+
+			clearTimeout(timer);
+
+			$a.siblings('.pause').removeClass('pause');
+
+			_index = ('next' == _className ? _index + 1 : _index - 1 + _len) % _len;
+
+			show();
+ 
+			return false;
+		});
+
+		function autoClickNext() {
+			_index = (_index + 1) % _len;
+			show();
+			timer = setTimeout(autoClickNext, _fadeSpeed + _speed);
+		}
+		if($this.hasClass('autoPlay')){
+	$controller.find('.play').click();
+}
+ 
+		function show() {
+			$li.eq(_index).animate({
+				opacity: 1, 
+				zIndex: 2
+			}, _fadeSpeed).siblings(':visible').animate({
+				opacity: 0, 
+				zIndex: 1
+			}, _fadeSpeed);
+		}
+	});
+});
 反正我很閒是一個YouTube頻道，團隊由鍾佳播、陳奕凱及趙福臨組成。內容以喜劇的方式討論各種主題，含括了社會政治、哲學思考、男女情感、都市傳說等，其中以諷刺資本主義和反抗體制的左膠為最主要特色。鏡頭則是以嘲弄YouTuber慣用的跳接剪輯，刻意粗糙的影像，以及縮放鏡頭的手法呈現。劇中創造了許多如「卑鄙源之助」、「惡魔貓男」、「台北暴徒」等虛構人物和洗腦台詞在網路上蔚為流行，可謂迷因製造機。
 
 ### Game
