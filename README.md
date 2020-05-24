@@ -10,33 +10,7 @@
 他有許多影片在嘴砲他人跟過激反應，但個人認為他的影片相當好笑，推薦大家去看看
 
 ### 我看youtube最愛看的團體:反正我很閒
-<body>
-	<div class="slideshow">
-		<div class="slideshow autoPlay">
-		<ul>
-			<li>
-				<a href="#">
-					<img src="https://i.imgur.com/l0J8D4L.png" title="" alt="" />
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="https://i.imgur.com/RE5xc6A.jpg" title="" alt="" />
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="https://i.imgur.com/S5F3ADb.jpg" title="" alt="" />
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<img src="https://i.imgur.com/kFoFCNP.jpg" title="" alt="" />
-				</a>
-			</li>
-		</ul>
-	</div>
-</body>
+
 <body>
 	<div class="abgne-block-20110423">
 		<ul>
