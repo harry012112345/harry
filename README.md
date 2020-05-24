@@ -37,7 +37,58 @@
 		</ul>
 	</div>
 </body>
-
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.slideshow {
+	position: relative;
+	height: 160px;
+	width: 210px;
+	float: left;
+	margin: 0 10px;
+	border: 3px solid #ddd;
+}
+.slideshow li {
+	position: absolute;
+}
+.slideshow a img{
+	display: block;
+	padding: 0;
+	margin: 0 auto;
+	border: none;
+}
+.slideshow li a{
+	display: block;
+}
+.slideshowController {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.slideshowController a {
+background: transparent url(images/arrows.png) no-repeat left top;
+display: block;
+width: 30px;	
+height: 30px;
+position: absolute;
+right: 60px;
+bottom: 0;
+z-index: 9999;
+outline: none;
+}
+.slideshowController .next{
+background-position: -30px 0;
+right: 0;
+}
+.slideshowController .play{
+	background-position: -60px 0;
+	right: 30px;
+}
+.slideshowController .pause{
+	background-position: -90px 0;
+}
 
 反正我很閒是一個YouTube頻道，團隊由鍾佳播、陳奕凱及趙福臨組成。內容以喜劇的方式討論各種主題，含括了社會政治、哲學思考、男女情感、都市傳說等，其中以諷刺資本主義和反抗體制的左膠為最主要特色。鏡頭則是以嘲弄YouTuber慣用的跳接剪輯，刻意粗糙的影像，以及縮放鏡頭的手法呈現。劇中創造了許多如「卑鄙源之助」、「惡魔貓男」、「台北暴徒」等虛構人物和洗腦台詞在網路上蔚為流行，可謂迷因製造機。
 
